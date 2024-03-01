@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BlogHub</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <!-- Include Firebase SDK scripts here -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="header-main">
+            <div class="logo">
+              <a href="index.html">BlogHub</a>
+            </div>
+            <div class="search-bar">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="search">
+            </div>
+            <div class="header-btn">
+              <a href="post.html">Write</a>
+              <a href="sign-in.html">Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="blogPosts">
+    <div class="container">
+      <div class="row" id="blogPostsContainer">
+        <!-- Posts will be dynamically added here -->
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-logo">
+            <h1>Blog Hub</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit fugit blanditiis facere delectus ab, quos eius nesciunt asperiores neque amet, illum dolores modi nobis! Ex, ratione inventore. Illum, necessitatibus reiciendis.</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="footer-links">
+            <h3>social media</h3>
+            <ul>
+              <li><i class="fa-brands fa-facebook"></i></li>
+              <li><i class="fa-brands fa-github"></i></li>
+              <li><i class="fa-brands fa-instagram"></i></li>
+              <li><i class="fa-brands fa-linkedin"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copywrite">
+      <p>&#169; copyright by Zeeshan Afzal </p>
+    </div>
+  </footer>
+
+  <!-- Include your script tags here -->
+  <!-- <script src="./assets/js/firebase-app.js"></script> -->
+  <!-- <script src="./assets/js/firebase-firestore.js"></script> -->
+  <!-- <script src="./assets/js/post.js"></script> -->
+  <!-- <script src="./assets/js/index.js"></script> -->
+  <script src="./assets/js/getPost.js"></script>
+
+  <script>
+    // Call displayPosts function to load posts when the page loads
+    window.onload = function() {
+      displayPosts();
+    };
+  </script>
+</body>
+</html>
